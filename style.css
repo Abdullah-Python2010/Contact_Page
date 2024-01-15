@@ -1,0 +1,178 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --blu: #2a4dd0 ;
+    --grn: #4ca154 ;
+    --blk: #111729 ;
+    --gry: #223344 ;
+    --ash: #909193 ;
+    --beg: #f2f9fe ;
+    --tex: #111729 ;
+    --bg: #f2f9fe ;
+}
+
+
+
+body{
+    background: var(--bg);
+}
+
+.nav{
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    height: 40px;
+    padding: 20px 0;
+
+}
+
+
+.nav, ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav ul li{
+    margin: 0 14px;
+}
+
+.nav ul li a{
+    color: var(--ash);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.active{
+    color: var(--tex) !important;
+}
+
+.toggle{
+    background-color: var(--tex);
+    padding: 4px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 4%;
+}
+
+
+#sun{
+    background-color: var(--bg);
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.main img{
+    width: 45%;
+    flex-basis: 40%;
+}
+
+.main-left{
+    text-align: left;
+    flex-basis: 55%;
+    width: 55%;
+}
+
+.main-left span{
+    font-size: 14px;
+    color: var(--ash);
+    font-weight: 600;
+}
+
+.main-left h1{
+    font-size: 60px;
+    width: 50%;
+    color: var(--gry);
+    padding: 25px 0 20px;
+}
+
+.main-left h4{
+    line-height: 30px;
+    font-size: 18px;
+    color: var(--ash);
+    width: 70%;
+    font-weight: 400;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    width: 40%;
+}
+
+.btns button{
+    background-color: var(--blu);
+    color: var(--beg);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.btns a{
+    color: var(--blu);
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.main-left ul{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 20px 30px;
+}
+
+.main-left li{
+    list-style-image: url('./src/Done_ring_round_fill.svg');
+}
+
+
+
+@media screen and (max-width: 1140px) {
+    .main{
+        flex-direction: column-reverse;
+    }
+
+    .main-left{
+        flex-basis: 100%;
+        text-align: center;
+        width: 100%;
+    }
+    .main img{
+        flex-basis: 100%;
+        margin-bottom: 100px;
+        width: 60%;
+    }
+    h1, p, h4, .main-left ul, .btns{
+        width: 50% !important;
+        padding: 0;
+        margin: auto;
+        text-align: center !important;
+    }
+    .btns{
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    h1{
+        font-size: 35px !important
+    }
+}
